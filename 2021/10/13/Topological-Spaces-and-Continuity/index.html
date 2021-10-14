@@ -1,0 +1,262 @@
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Topological Spaces and Continuity | </title><meta name="author" content="v0id"><meta name="copyright" content="v0id"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="1. Topological Spaces2. Basis of Topology3. The Metric Topology3. The Subspace topology4. The Disjoint Union Topology5. Continuity and Homeomorphism6. The Product Topology7. The Quotient TopologyExerc">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Topological Spaces and Continuity">
+<meta property="og:url" content="https://v0id.cquisa.com/2021/10/13/Topological-Spaces-and-Continuity/index.html">
+<meta property="og:site_name">
+<meta property="og:description" content="1. Topological Spaces2. Basis of Topology3. The Metric Topology3. The Subspace topology4. The Disjoint Union Topology5. Continuity and Homeomorphism6. The Product Topology7. The Quotient TopologyExerc">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg">
+<meta property="article:published_time" content="2021-10-12T20:38:06.000Z">
+<meta property="article:modified_time" content="2021-10-13T11:24:32.734Z">
+<meta property="article:author" content="v0id">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg"><link rel="shortcut icon" href="https://lh3.googleusercontent.com/proxy/7gDkpc5GNcetnMZ98woWV8URF3Zku7Dda2oj_U986F_NUYwAHarzMMemClRbEJjV0gnycMzlP5V80UBCW9MBxQ61MJ4UzXB8RFpL"><link rel="canonical" href="https://v0id.cquisa.com/2021/10/13/Topological-Spaces-and-Continuity/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: 'Just',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+    },
+    fancybox: {
+      js: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isanchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Topological Spaces and Continuity',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2021-10-13 19:24:32'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if (GLOBAL_CONFIG_SITE.isHome && /iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 5.4.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/09292204017016.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">6</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">Tags</div><div class="length-num">2</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">Categories</div><div class="length-num">3</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/"></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">Topological Spaces and Continuity</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2021-10-12T20:38:06.000Z" title="Created 2021-10-13 04:38:06">2021-10-13</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2021-10-13T11:24:32.734Z" title="Updated 2021-10-13 19:24:32">2021-10-13</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/Mathematics/">Mathematics</a><i class="fas fa-angle-right post-meta-separator"></i><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/Mathematics/Course-notes/">Course notes</a><i class="fas fa-angle-right post-meta-separator"></i><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/Mathematics/Course-notes/Topology/">Topology</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="Topological Spaces and Continuity"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post View:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="1-Topological-Spaces"><a href="#1-Topological-Spaces" class="headerlink" title="1. Topological Spaces"></a>1. Topological Spaces</h1><h1 id="2-Basis-of-Topology"><a href="#2-Basis-of-Topology" class="headerlink" title="2. Basis of Topology"></a>2. Basis of Topology</h1><h1 id="3-The-Metric-Topology"><a href="#3-The-Metric-Topology" class="headerlink" title="3. The Metric Topology"></a>3. The Metric Topology</h1><h1 id="3-The-Subspace-topology"><a href="#3-The-Subspace-topology" class="headerlink" title="3. The Subspace topology"></a>3. The Subspace topology</h1><h1 id="4-The-Disjoint-Union-Topology"><a href="#4-The-Disjoint-Union-Topology" class="headerlink" title="4. The Disjoint Union Topology"></a>4. The Disjoint Union Topology</h1><h1 id="5-Continuity-and-Homeomorphism"><a href="#5-Continuity-and-Homeomorphism" class="headerlink" title="5. Continuity and Homeomorphism"></a>5. Continuity and Homeomorphism</h1><h1 id="6-The-Product-Topology"><a href="#6-The-Product-Topology" class="headerlink" title="6. The Product Topology"></a>6. The Product Topology</h1><h1 id="7-The-Quotient-Topology"><a href="#7-The-Quotient-Topology" class="headerlink" title="7. The Quotient Topology"></a>7. The Quotient Topology</h1><h1 id="Exercises"><a href="#Exercises" class="headerlink" title="Exercises"></a>Exercises</h1><p>Find a homeomorphism $\varphi:\mathbb{R}^n\to\mathbb{R}^n$ satisfies:  </p>
+<ul>
+<li>$\varphi=1_{\mathbb{R}^n\setminus\mathring{D^n}}$.</li>
+<li>$\varphi(0)=p$, $p\in\mathring{D^n}$.  </li>
+</ul>
+<p>Where $D^n$ denotes the set $\{x\in\mathbb{R}^n\colon\ |x|\leq 1\}$.</p>
+<p>Suppose that $\varphi\colon S^1 \to S^1$ is a homeomorphism. Prove that there exists a homeomorphism $\psi\colon D^2 \to D^2$, satisfies $\psi|_{S^1}=\varphi$.</p>
+<p><strong>(Hopf Link)</strong></p>
+<script type="math/tex; mode=display">L=\\{(x,y)\in\mathbb{C}^2\colon\ x^2+y^2=0, |x|^2+|y|^2=1\\}</script><ol>
+<li>Prove that $L\cong S^1\sqcup S^1$.</li>
+<li><p>Describe the image of the stereographic projection of $L$. </p>
+</li>
+<li><p>For $(x,y)\in L$，we have</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+&x^2+y^2 =0 \implies(y-ix)(y+ix)=0 \implies y=\pm{i}x \\\\ 
+&|x|^2+|y|^2 =1 \implies |x|=|y|=\frac{\sqrt{2}}{2}
+\end{aligned}</script><p>Let:</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+U &=\\{(x,ix)\in\mathbb{C}^2\colon\ |x|=\frac{\sqrt{2}}{2}\\} \\\\
+V &=\\{(x,-ix)\in\mathbb{C}^2\colon\ |x|=\frac{\sqrt{2}}{2}\\}
+\end{aligned}</script><p>we have $L=U\sqcup V$ and we can simply construct homeomorphisms $(x,ix)\mapsto (\sqrt{2}\operatorname{Re}(x),\sqrt{2}\operatorname{Im}(x))$, and $(x,-ix)\mapsto (\sqrt{2}\operatorname{Re}(x),\sqrt{2}\operatorname{Im}(x))$ from $U\to S^1$ and $V\to S^1$ respectively, so we have the conclusion $L=U\sqcup V \cong S^1\sqcup S^1$.  </p>
+</li>
+<li><p>Consider the unit 3-sphere $\{(x,y)\in\mathbb{C}^2\colon\ |x|^2+|y|^2=1\}$, the stereographic projection $P$ of the sphere from the point $(0,1)$ maps each point $(x,y)$ differs from $(0,1)$ of the sphere to the point of intersection of the real line joining $(x,y)$ and $(0,1)$ with the 3-space $\{(p,q)\in\mathbb{C}^2\colon\ \operatorname{Re}(q)=0\}$. Expicitly, when $\operatorname{Re}(y)\neq 1$:</p>
+<script type="math/tex; mode=display">
+P\colon\quad (x,y)\mapsto (\frac{\operatorname{Re}(x)}{1-\operatorname{Re}(y)},\frac{\operatorname{Im}(x)}{1-\operatorname{Re}(y)},\frac{\operatorname{Im}(y)}{1-\operatorname{Re}(y)})</script><p>Since for each points $(x,y)\in L$, $\operatorname{Re}(y)\neq 1$, we can find the image for $U$ and $V$ separately from the formula above:</p>
+<script type="math/tex; mode=display">
+P(U)=
+\begin{cases}
+u=w\\\\
+2u^2+(v+1)^2=2
+\end{cases}\quad
+P(V)=
+\begin{cases}
+u=-w\\\\
+2u^2+(v-1)^2=2
+\end{cases}</script><p>Equivalently:</p>
+<script type="math/tex; mode=display">
+P(U)=
+\begin{cases}
+u=w\\\\
+u^2+(v+1)^2+w^2=2
+\end{cases}\quad
+P(V)=
+\begin{cases}
+u=-w\\\\
+u^2+(v-1)^2+w^2=2
+\end{cases}</script><p>where $P(U)$ and $P(V)$ are two circles on two intersecting planes respectively (in this case the two planes are perpendicular), and both two centers are located on the line of the intersection of the two planes. Since the distance between centers which is $2$ is less than the sum of radii that is $2\sqrt{2}$, the two circles are going to be linked together, in the sense that neither can be continuously shrunk to a point without pcissing through the other one (see below).</p>
+<iframe src="https://www.geogebra.org/3d/eqrrmxjv?embed" width="800" height="600" allowfullscreen style="border: 1px solid #e4e4e4;border-radius: 4px;" frameborder="0"></iframe>
+
+
+</li>
+</ol>
+<p>If $(X,d)$ is a metric space and $A$ is a non-empty closed set of $X$, prove that $f(x)=\inf_{a\in A}\{d(x,a)\}$ is a continuous function on $X$ and also, $f(x)=0$ if and only if $x\in A$.</p>
+<p>Let $\mathbb{Z}$ denotes the set of integers, $U\subseteq\mathbb{Z}$ is said to be symmetrical if $n\in U$ and $-n\in U$ are equivalent for $\forall n\in \mathbb{Z}$. We define a topology $\mathcal{T}_{\mathbb{Z}}$ on $\mathbb{Z}$, that the set of $\mathbb{Z}$ is open if it is symmetrical.</p>
+<ol>
+<li>Prove that $\mathcal{T}_{\mathbb{Z}}$ is actually a topology.</li>
+<li>If $A=\{-1,0,1,2\}\subseteq \mathbb{Z}$, determine $\mathring{A}$, $\bar{A}$ and $A’$.</li>
+<li>Is $A$ an open set on $\mathbb{Z}$? Or is $A$ closed?</li>
+</ol>
+<p>Prove that $(\mathbb{R}^{n+1}\setminus\{0\})\cong (S^n\times\mathbb{R}_{&gt;0})$, where $S^n=\{x\in\mathbb{R}^{n+1}\colon\ |x|=1\}$.</p>
+<p><strong>(Zariski Topology)</strong> &ensp; Subset $\mathbb{Z}$ of $\mathbb{C}^n$ is said to be Zariski closed if there exists polynomials $(P<em>i)</em>{i\in I}$ in $\mathbb{C}[x_1,x_2,\dots,x_n]$, such that $Z=\{z\in\mathbb{C}^n\colon\ P_i(z)=0, \forall i\in I\}$. If the complement of $U\subseteq \mathbb{C}^n$ is Zariski closed, we say $U$ is Zariski open. Prove the following:</p>
+<ol>
+<li>All Zariski open sets in $\mathbb{C}^n$ forms a topology on $\mathbb{C}^n$, which is called Zariski topology.</li>
+<li>$U_f=\{x\in\mathbb{C}^n\colon f(x)\neq{0}\}$ where $f\in\mathbb{C}[x_1,x_2,\dots,x_n]$, forms a topology basis of Zariski topology on $\mathbb{C}^n$.</li>
+<li>Suppose that $f_1,f_2,\dots,f_m$ are polynomials of $\mathbb{C}[x_1,x_2,\dots,x_n]$. Prove the map:<script type="math/tex; mode=display">(x_1,x_2,\dots,x_n)\mapsto(f_1(x),f_2(x),\dots,f_m(x))</script>is continuous if we consider the Zariski topology on both $\mathbb{C}^n$ and $\mathbb{C}^m$.</li>
+</ol>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">Author: </span><span class="post-copyright-info"><a href="mailto:undefined">v0id</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">Link: </span><span class="post-copyright-info"><a href="https://v0id.cquisa.com/2021/10/13/Topological-Spaces-and-Continuity/">https://v0id.cquisa.com/2021/10/13/Topological-Spaces-and-Continuity/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">Copyright Notice: </span><span class="post-copyright-info">All articles in this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless stating additionally.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/2021/09/06/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%AE%9E%E7%94%A8%E6%8A%80%E5%B7%A7/"><img class="next-cover" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">Next Post</div><div class="next_info">数据分析实用技巧</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/09292204017016.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">v0id</div><div class="author-info__description">一個WEB手轉PWN</div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">6</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">Tags</div><div class="length-num">2</div></a></div><div class="card-info-data-item is-center"><a href="/categories/"><div class="headline">Categories</div><div class="length-num">3</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>Announcement</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>Catalog</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-Topological-Spaces"><span class="toc-number">1.</span> <span class="toc-text">1. Topological Spaces</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-Basis-of-Topology"><span class="toc-number">2.</span> <span class="toc-text">2. Basis of Topology</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-The-Metric-Topology"><span class="toc-number">3.</span> <span class="toc-text">3. The Metric Topology</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-The-Subspace-topology"><span class="toc-number">4.</span> <span class="toc-text">3. The Subspace topology</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4-The-Disjoint-Union-Topology"><span class="toc-number">5.</span> <span class="toc-text">4. The Disjoint Union Topology</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#5-Continuity-and-Homeomorphism"><span class="toc-number">6.</span> <span class="toc-text">5. Continuity and Homeomorphism</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#6-The-Product-Topology"><span class="toc-number">7.</span> <span class="toc-text">6. The Product Topology</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#7-The-Quotient-Topology"><span class="toc-number">8.</span> <span class="toc-text">7. The Quotient Topology</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Exercises"><span class="toc-number">9.</span> <span class="toc-text">Exercises</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2021/10/13/Topological-Spaces-and-Continuity/" title="Topological Spaces and Continuity"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Topological Spaces and Continuity"/></a><div class="content"><a class="title" href="/2021/10/13/Topological-Spaces-and-Continuity/" title="Topological Spaces and Continuity">Topological Spaces and Continuity</a><time datetime="2021-10-12T20:38:06.000Z" title="Created 2021-10-13 04:38:06">2021-10-13</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/09/06/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%AE%9E%E7%94%A8%E6%8A%80%E5%B7%A7/" title="数据分析实用技巧"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="数据分析实用技巧"/></a><div class="content"><a class="title" href="/2021/09/06/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%AE%9E%E7%94%A8%E6%8A%80%E5%B7%A7/" title="数据分析实用技巧">数据分析实用技巧</a><time datetime="2021-09-06T07:04:19.000Z" title="Created 2021-09-06 15:04:19">2021-09-06</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/08/29/%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96%E7%B3%BB%E5%88%97%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%80%EF%BC%89/" title="反序列化系列笔记（一）"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="反序列化系列笔记（一）"/></a><div class="content"><a class="title" href="/2021/08/29/%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96%E7%B3%BB%E5%88%97%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%80%EF%BC%89/" title="反序列化系列笔记（一）">反序列化系列笔记（一）</a><time datetime="2021-08-29T14:37:37.000Z" title="Created 2021-08-29 22:37:37">2021-08-29</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/08/29/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/" title="图像处理"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="图像处理"/></a><div class="content"><a class="title" href="/2021/08/29/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/" title="图像处理">图像处理</a><time datetime="2021-08-29T09:18:14.000Z" title="Created 2021-08-29 17:18:14">2021-08-29</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/07/26/Ijctf2021%E5%A4%8D%E7%8E%B0/" title="Ijctf2021复现"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Ijctf2021复现"/></a><div class="content"><a class="title" href="/2021/07/26/Ijctf2021%E5%A4%8D%E7%8E%B0/" title="Ijctf2021复现">Ijctf2021复现</a><time datetime="2021-07-26T12:06:41.000Z" title="Created 2021-07-26 20:06:41">2021-07-26</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2021 By v0id</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Read Mode"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="Switch Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between single-column and double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table Of Contents"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="Back To Top"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"><script>if (!window.MathJax) {
+  window.MathJax = {
+    tex: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"]],
+      tags: 'ams'
+    },
+    chtml: {
+      scale: 1.2
+    },
+    options: {
+      renderActions: {
+        findScript: [10, doc => {
+          for (const node of document.querySelectorAll('script[type^="math/tex"]')) {
+            const display = !!node.type.match(/; *mode=display/)
+            const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display)
+            const text = document.createTextNode('')
+            node.parentNode.replaceChild(text, node)
+            math.start = {node: text, delim: '', n: 0}
+            math.end = {node: text, delim: '', n: 0}
+            doc.math.push(math)
+          }
+        }, ''],
+        insertScript: [200, () => {
+          document.querySelectorAll('mjx-container:not\([display]\)').forEach(node => {
+            const target = node.parentNode
+            if (target.nodeName.toLowerCase() === 'li') {
+              target.parentNode.classList.add('has-jax')
+            } else {
+              target.classList.add('has-jax')
+            }
+          });
+        }, '', false]
+      }
+    }
+  }
+  
+  const script = document.createElement('script')
+  script.src = 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js'
+  script.id = 'MathJax-script'
+  script.async = true
+  document.head.appendChild(script)
+} else {
+  MathJax.startup.document.state(0)
+  MathJax.texReset()
+  MathJax.typeset()
+}</script></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
